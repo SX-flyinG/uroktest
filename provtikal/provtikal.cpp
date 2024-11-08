@@ -23,10 +23,37 @@ public :
 		cout << "Name of student : " << this->name << endl;
 		cout << "age of student : " << this->age << endl;
 	}
+
+	void ChangeInfoAbouStudent() {
+		cout << "Enter a new name of student  : ";
+		cin >> this->name;
+		cout << "Enter a new age of student : ";
+		cin >> this->age;
+	}
+
+	string getName() {
+		return this->name;
+	}
+
+	int getAge() {
+		return this->age;
+	}
+
+	void setName(const string name) {
+		this->name = name;
+	}
+
+	void setAge(const int age) {
+		this->age = age;
+	}
 };
 
 int main()
 {
 	Student obj;
 	obj.PrintInfoAboutStudent();
+	obj.ChangeInfoAbouStudent();
+	obj.PrintInfoAboutStudent();
+
+	return 0;
 }
